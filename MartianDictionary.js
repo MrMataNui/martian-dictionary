@@ -1,3 +1,28 @@
+	const soundSymbol = [
+		{ "sound": "æ", "letter": "A" },
+		{ "sound": "ɲ", "letter": "C" },
+		{ "sound": "ʃ", "letter": "D" },
+		{ "sound": "e", "letter": "E" },
+		{ "sound": "f", "letter": "F" },
+		{ "sound": "ŋ", "letter": "G" },
+		{ "sound": "ʔ", "letter": "H" },
+		{ "sound": "i", "letter": "I" },
+		{ "sound": "ʤ", "letter": "J" },
+		{ "sound": "c", "letter": "K" },
+		{ "sound": "l", "letter": "L" },
+		{ "sound": "m", "letter": "M" },
+		{ "sound": "n", "letter": "N" },
+		{ "sound": "ɔ", "letter": "O" },
+		{ "sound": "x", "letter": "Q" },
+		{ "sound": "ɾ", "letter": "R" },
+		{ "sound": "s", "letter": "S" },
+		{ "sound": "t", "letter": "T" },
+		{ "sound": "u", "letter": "U" },
+		{ "sound": "ə", "letter": "W" },
+		{ "sound": "ʧ", "letter": "X" },
+		{ "sound": "j", "letter": "Y" },
+		{ "sound": "ʒ", "letter": "Z" }
+	];
 const marsDitionary = {
 	Martian: [
 		{ "Martian": "A", "IPA": "/æ/", "POS": "pron.", "English": "it (accusative, inanimate)" },
@@ -5713,7 +5738,7 @@ const marsDitionary = {
 		{ "English": "hut", "POS": "n", "Martian": "STAZOSI" },
 		{ "English": "hybrid", "POS": "n", "Martian": "SFULW" },
 		{ "English": "i", "POS": "pronoun", "Martian": "ITD" },
-		{ "English": "I", "POS": "pron", "Martian": "LW" },
+		{ "English": "i", "POS": "pron", "Martian": "LW" },
 		{ "English": "ice", "POS": "n", "Martian": "SFUM" },
 		{ "English": "icon", "POS": "n", "Martian": "STENSW" },
 		{ "English": "idea", "POS": "n", "Martian": "STEK" },

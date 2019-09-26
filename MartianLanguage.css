@@ -182,6 +182,17 @@ table {
   background-color: transparent;
 }
 
+#vowel-graph tr span {
+  position: absolute;
+  left: 0px;
+  text-align: right;
+  background: transparent
+}
+
+#vowel-graph tr span span {
+  padding: 0px 1px 0px 2px;
+}
+
 #vowel-graph div {
   height: 1px;
   width: 60px;
@@ -228,7 +239,10 @@ br {
   text-align: right;
 }
 
-#show-martian, #show-english { cursor: pointer; }
+#show-martian,
+#show-english {
+  cursor: pointer;
+}
 
 .backward {
   display: inline-block;

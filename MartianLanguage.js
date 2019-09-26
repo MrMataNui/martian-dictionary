@@ -18,6 +18,7 @@ English = English.sort((a, b) => sorter(a.English, b.English));
   $('#martian-dicionary ul').html(martianDicionary);
 
   $.each(English, (i, word) => {
+		if (word.English === 'i') { word.English = 'I'; }
     let wordGet = `<b>${word.English}</b>
 		<pos>${word.POS}</pos>
 		<martian>${word.Martian}</martian>`;
@@ -45,54 +46,12 @@ English = English.sort((a, b) => sorter(a.English, b.English));
     $('#english-dicionary').show();
     $('#martian-dicionary').hide();
   });
-	const soundSymbol = [
-		{ "sound": "æ", "letter": "A" },
-		{ "sound": "ɲ", "letter": "C" },
-		{ "sound": "ʃ", "letter": "D" },
-		{ "sound": "e", "letter": "E" },
-		{ "sound": "f", "letter": "F" },
-		{ "sound": "ŋ", "letter": "G" },
-		{ "sound": "ʔ", "letter": "H" },
-		{ "sound": "i", "letter": "I" },
-		{ "sound": "ʤ", "letter": "J" },
-		{ "sound": "c", "letter": "K" },
-		{ "sound": "l", "letter": "L" },
-		{ "sound": "m", "letter": "M" },
-		{ "sound": "n", "letter": "N" },
-		{ "sound": "ɔ", "letter": "O" },
-		{ "sound": "x", "letter": "Q" },
-		{ "sound": "ɾ", "letter": "R" },
-		{ "sound": "s", "letter": "S" },
-		{ "sound": "t", "letter": "T" },
-		{ "sound": "u", "letter": "U" },
-		{ "sound": "ə", "letter": "W" },
-		{ "sound": "ʧ", "letter": "X" },
-		{ "sound": "j", "letter": "Y" },
-		{ "sound": "ʒ", "letter": "Z" }
-	];
+	let pronunciation = `<tr> <th>Pronunciation</th> <th>Spelling</th> </tr>`;
+  $.each(soundSymbol, (i, word) => {
+    pronunciation += `<tr>
+			<td> <ipa>/${word.sound}/</ipa> </td>
+			<td> <martian>${word.letter}</martian> </td>
+		</tr>`;
+  });
+	$('#spell-rules-data').html(`<table>${pronunciation}</table>`);
 });
-/*
-æ > A
-ɲ > C
-ʃ > D
-e > E
-f > F
-ŋ > G
-ʔ > H
-i > I
-ʤ > J
-c > K
-l > L
-m > M
-n > N
-ɔ > O
-x > Q
-ɾ > R
-s > S
-t > T
-u > U
-ə > W
-ʧ > X
-j > Y
-ʒ > Z
-*/
