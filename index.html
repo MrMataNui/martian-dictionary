@@ -2,710 +2,851 @@
 <html>
 	<head>
 		<title>Martian</title>
-		<style> r { font-weight: bold; } </style>
 		<meta charset="utf-8" />
 		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 		<link href="https://www.vulgarlang.com/style/vulgar-style27.css" rel="stylesheet" />
 		<link href="https://www.vulgarlang.com/pretty2.css" rel="stylesheet" />
 		<script src="https://code.jquery.com/jquery-1.8.3.min.js"></script>
 
+		<link rel="stylesheet" type="text/css" href="navbar.css" />
 		<link rel="stylesheet" type="text/css" href="MartianLanguage.css" />
+		<script src="navbar.js"></script>
 		<script src="MartianDictionary.js"></script>
 		<script src="MartianLanguage.js"></script>
 	</head>
 	<body>
 		<div id="lang-full">
-		<div id="lang-name" class="output">
-			<h1 class="head-langname">The Language of Martian</h1>
-			<h2> <center> Natively known as: <martian>XEHEIXW</martian> <ipa>/ʧəˈʔeiʧə/</ipa> </center> </h2>
-			<div id="lang-sentence">
-				<pos>...and he stood holding his hat and turned his wet face to the wind...</pos>
-				<br />
-				<martian>KO SFUJE DIL NUZEN SLWDUYRIR JIL KO NUZEN SGOCA SLWK AL SNUAL HE</martian>
-				<br />
-				<b>Pronunciation:</b>
-				<ipa>/cɔ sfuˈʤe ʃil nuˈʒen sləʃuˈjɾiɾ ʤil cɔ nuˈʒen sŋɔˈɲæ sləc æl snuˈæl ʔe/</ipa>
-				<br />
-				<p> <b>Martian word order</b>: ...and he stood hat his holding and his face wet turned the wind to... </p>
-			</div>
-			<div id="togTrans" style="display: none">
-				<center>
-					Note: Translator does not automatically do word order and only finds exact matches in your dictionary (will not find plurals, past-tense, etc.) However, all available affixes in the language may be used. Making the translator smarter is a work in progress.
-					Sentence:
-				</center>
-				<textarea id="toTranslate" spellcheck="false" rows="4" cols="55" type="textarea" name="in"></textarea>
-				<input type="button" class="button0 but button10" value="Translate" onClick="doTrans()" />
-				Translation:
-				<p id="translated">
-					Affixes in this language:
-					ADJ.TO.ADV
-					<d>|</d> ADJ.TO.NOUN
-					<d>|</d> ADJ.TO.VERB
-					<d>|</d> AUG
-					<d>|</d> DIM
-					<d>|</d> DOER
-					<d>|</d> NOUN.A.ACC.DEF
-					<d>|</d> NOUN.A.ACC.INDEF
-					<d>|</d> NOUN.A.NOM.DEF
-					<d>|</d> NOUN.A.NOM.INDEF
-					<d>|</d> NOUN.IA.ACC.DEF
-					<d>|</d> NOUN.IA.ACC.INDEF
-					<d>|</d> NOUN.IA.NOM.DEF
-					<d>|</d> NOUN.IA.NOM.INDEF
-					<d>|</d> NOUN.TO.ADJ
-					<d>|</d> NOUN.TO.VERB
-					<d>|</d> PLACE
-					<d>|</d> VERB.PAST.A
-					<d>|</d> VERB.PAST.IA
-					<d>|</d> VERB.PERF
-					<d>|</d> VERB.PRES.A
-					<d>|</d> VERB.PRES.IA
-					<d>|</d> VERB.TO.ADJ
-					<d>|</d> VERB.TO.NOUN
-				</p>
-			</div>
-			<div id="lang-seed" style="display: none"> <span>Seed for this language:</span> 5892224008298317 </div>
-		</div>
-		<div id="lang-phon">
-			<h2 class="head-phon">Spelling & Phonology</h2>
-			<div id="consonants">
-				<div id="cons-inv"></div>
-				<div id="bigcontab" class="table-tab">
-					<p> Consonant inventory: <ipa>/c f j l m n s t x ŋ ɲ ɾ ʃ ʒ ʔ ʤ ʧ/</ipa> </p>
-					<table>
-						<tr>
-							<th>↓Manner/Place→</th>
-							<th>Bilabial</th>
-							<th>Labiodental</th>
-							<th>Alveolar</th>
-							<th>Palato-alveolar</th>
-							<th>Palatal</th>
-							<th>Velar</th>
-							<th>Glottal</th>
-						</tr>
-						<tr>
-							<td>Nasal</td>
-							<td align="center">m</td>
-							<td align="center"></td>
-							<td align="center">n</td>
-							<td align="center"></td>
-							<td align="center">ɲ</td>
-							<td align="center">ŋ</td>
-							<td align="center"></td>
-						</tr>
-						<tr>
-							<td>Stop</td>
-							<td align="center"></td>
-							<td align="center"></td>
-							<td align="center">t</td>
-							<td align="center"></td>
-							<td align="center">c</td>
-							<td align="center"></td>
-							<td align="center">ʔ</td>
-						</tr>
-						<tr>
-							<td>Affricate</td>
-							<td align="center"></td>
-							<td align="center"></td>
-							<td align="center"></td>
-							<td align="center">ʧ ʤ</td>
-							<td align="center"></td>
-							<td align="center"></td>
-							<td align="center"></td>
-						</tr>
-						<tr>
-							<td>Fricative</td>
-							<td align="center"></td>
-							<td align="center">f</td>
-							<td align="center">s</td>
-							<td align="center">ʃ ʒ</td>
-							<td align="center"></td>
-							<td align="center">x</td>
-							<td align="center"></td>
-						</tr>
-						<tr>
-							<td>Approximant</td>
-							<td align="center"></td>
-							<td align="center"></td>
-							<td align="center"></td>
-							<td align="center"></td>
-							<td align="center">j</td>
-							<td align="center"></td>
-							<td align="center"></td>
-						</tr>
-						<tr>
-							<td>Tap</td>
-							<td align="center"></td>
-							<td align="center"></td>
-							<td align="center">ɾ</td>
-							<td align="center"></td>
-							<td align="center"></td>
-							<td align="center"></td>
-							<td align="center"></td>
-						</tr>
-						<tr>
-							<td>Lateral approximant</td>
-							<td align="center"></td>
-							<td align="center"></td>
-							<td align="center">l</td>
-							<td align="center"></td>
-							<td align="center"></td>
-							<td align="center"></td>
-							<td align="center"></td>
-						</tr>
-					</table>
-				</div>
-			</div>
-			<div id="vowels">
-				<div id="vow-inv"> <p> Vowel inventory: <ipa>/e i u æ ɔ ə/</ipa> </p> </div>
-				<div id="VFS" style="display: none;">
-					<p>Show frequency stats</p>
-					<p>æ=8 e=6 i=5 ɔ=5 u=5 ə=4</p>
-				</div>
-				<div id="bigvowtab">
+			<nav id="head-nav">
+				<ul>
+					<li id="nav-phon"> <a class="active" href="#lang-phon"> Spelling & Phonology </a> </li>
+					<li id="nav-grammar"> <a href="#lang-grammar"> Grammar </a> </li>
+					<li id="nav-lexi"> <a href="#lang-lexi"> Dictionary </a> </li>
+				</ul>
+			</nav>
+			<div id="lang-name" class="output">
+				<h1 class="head-langname">The Language of Martian</h1>
+				<h2>
+					<center> Natively known as: <martian>XWHEXW</martian> <ipa>/ʧəˈʔeʧə/</ipa> </center>
+				</h2>
+				<div id="lang-sentence">
+					<pos>...and he stood holding his hat and turned his wet face to the wind...</pos>
 					<br />
-					<table id="vowel-table" style="border-style: solid;">
-						<tr> <th colspan="2">IPA vowel chart</th> </tr>
-						<tr>
-							<td colspan="2" style="text-align:center">
-								<table style="position: relative; line-height:1.4em;background:transparent; background:#F9F9F9; margin:0em auto 0em auto;">
-									<tr style="text-align:center;">
-										<td></td>
-										<td style="width:64px;"> <span style="position:relative;">Front</span> </td>
-										<td style="width:62px;">Near-​front</td>
-										<td style="width:64px;">Central</td>
-										<td style="width:62px;">Near-​back</td>
-										<td style="width:64px;">Back</td>
-									</tr>
-									<tr>
-										<td style="text-align:right;"> <b>High</b> </td>
-										<td colspan="5" rowspan="7">
-											<div style="position:relative;">
-												<img
-													alt="Blank vowel trapezoid.svg"
-													src="https://www.vulgarlang.com/images/320px-Blank_vowel_trapezoid.svg.png"
-													height="224" width="320"
-													data-file-height="700" data-file-width="1000"
-													srcset="https://www.vulgarlang.com/images/480px-Blank_vowel_trapezoid.svg.png 1.5x, https://www.vulgarlang.com/images/640px-Blank_vowel_trapezoid.svg.png 2x"
-												/>
-												<div style="background:transparent; position:absolute; top:0px; left:0px;">
-													<table id="vowel-graph">
-														<tr>
-															<td>
-																<div style="top:8px; left:38px;">
-																	<span style="position:absolute; left:0px; text-align:right; background:transparent;">
-																		<span style="background:#F9F9F9; padding:0px 1px 0px 2px;">i&#160;&#160; </span>
-																	</span>
-																</div>
-																<div style="top:8px; left:163px;">
-																	<span style="position:absolute; left:0px; text-align:right; background:transparent;">
-																		<span style="background:transparent; padding:0px 1px 0px 2px;">&#160;&#160; </span>
-																	</span>
-																</div>
-																<div style="top:8px; left:285px;">
-																	<span style="position:absolute; left:0px; text-align:right; background:transparent;">
-																		<span style="background:#F9F9F9; padding:0px 1px 0px 2px;">&#160;&#160;u </span>
-																	</span>
-																</div>
-																<div style="top:39px; left:120px;">
-																	<span style="position:absolute; left:0px; text-align:right; background:transparent;">
-																		<span style="background:transparent; padding:0px 1px 0px 2px;">&#160;&#160; </span>
-																	</span>
-																</div>
-																<div style="top:39px; left:175px;">
-																	<span style="position:absolute; left:0px; text-align:right; background:transparent;">
-																		<span style="background:transparent; padding:0px 1px 0px 2px;">&#160;&#160; </span>
-																	</span>
-																</div>
-																<div style="top:39px; left:230px;">
-																	<span style="position:absolute; left:0px; text-align:right; background:transparent;">
-																		<span style="background:transparent; padding:0px 1px 0px 2px;">&#160;&#160; </span>
-																	</span>
-																</div>
-																<div style="top:72px; left:74px;">
-																	<span style="position:absolute; left:0px; text-align:right; background:transparent;">
-																		<span style="background:#F9F9F9; padding:0px 1px 0px 2px;">e&#160;&#160; </span>
-																	</span>
-																</div>
-																<div style="top:72px; left:181px;">
-																	<span style="position:absolute; left:0px; text-align:right; background:transparent;">
-																		<span style="background:transparent; padding:0px 1px 0px 2px;">&#160;&#160; </span>
-																	</span>
-																</div>
-																<div style="top:72px; left:285px;">
-																	<span style="position:absolute; left:0px; text-align:right; background:transparent;">
-																		<span style="background:transparent; padding:0px 1px 0px 2px;">&#160;&#160; </span>
-																	</span>
-																</div>
-																<div style="top:103px; left:95px;">
-																	<span style="position:absolute; left:0px; text-align:right; background:transparent;">
-																		<span style="background:transparent; padding:0px 1px 0px 2px;">&#160;&#160; </span>
-																	</span>
-																</div>
-																<div style="top:103px; left:197px;">
-																	<span style="position:absolute; left:0px; text-align:right; background:transparent;">
-																		<span style="background:#F9F9F9; padding:0px 1px 0px 2px;">ə&#160;&#160; </span>
-																	</span>
-																</div>
-																<div style="top:103px; left:285px;">
-																	<span style="position:absolute; left:0px; text-align:right; background:transparent;">
-																		<span style="background:transparent; padding:0px 1px 0px 2px;">&#160;&#160; </span>
-																	</span>
-																</div>
-																<div style="top:136px; left:119px;">
-																	<span style="position:absolute; left:0px; text-align:right; background:transparent;">
-																		<span style="background:transparent; padding:0px 1px 0px 2px;">&#160;&#160; </span>
-																	</span>
-																</div>
-																<div style="top:136px; left:202px;">
-																	<span style="position:absolute; left:0px; text-align:right; background:transparent;">
-																		<span style="background:transparent; padding:0px 1px 0px 2px;">&#160;&#160; </span>
-																	</span>
-																</div>
-																<div style="top:136px; left:285px;">
-																	<span style="position:absolute; left:0px; text-align:right; background:transparent;">
-																		<span style="background:#F9F9F9; padding:0px 1px 0px 2px;">&#160;&#160;ɔ </span>
-																	</span>
-																</div>
-																<div style="top:167px; left:133px;">
-																	<span style="position:absolute; left:0px; text-align:right; background:transparent;">
-																		<span style="background:#F9F9F9; padding:0px 1px 0px 2px;">æ&#160;&#160; </span>
-																	</span>
-																</div>
-																<div style="top:167px; left:212px;">
-																	<span style="position:absolute; left:0px; text-align:right; background:transparent;">
-																		<span style="background:transparent; padding:0px 1px 0px 2px;">&#160;&#160; </span>
-																	</span>
-																</div>
-																<div style="top:199px; left:160px;">
-																	<span style="position:absolute; left:0px; text-align:right; background:transparent;">
-																		<span style="background:transparent; padding:0px 1px 0px 2px;">&#160;&#160; </span>
-																	</span>
-																</div>
-																<div style="top:199px; left:223px;">
-																	<span style="position:absolute; left:0px; text-align:right; background:transparent;">
-																		<span style="background:transparent; padding:0px 1px 0px 2px;">&#160;&#160; </span>
-																	</span>
-																</div>
-																<div style="top:199px; left:286px;">
-																	<span style="position:absolute; left:0px; text-align:right; background:transparent;">
-																		<span style="background:transparent; padding:0px 1px 0px 2px;">&#160;&#160; </span>
-																	</span>
-																</div>
-															</td>
-														</tr>
-													</table>
-												</div>
-											</div>
-										</td>
-									</tr>
-									<tr> <td style="text-align:right;">Near-&nbsp;high</td> </tr>
-									<tr> <td style="text-align:right;">High-&nbsp;mid</td> </tr>
-									<tr> <td style="text-align:right;"> <b>Mid</b> </td> </tr>
-									<tr> <td style="text-align:right;">Low-&nbsp;mid</td> </tr>
-									<tr> <td style="text-align:right;">Near-&nbsp;Low</td> </tr>
-									<tr> <td style="height:32px; text-align:right;"> <b>Low</b> </td> </tr>
-								</table>
-							</td>
-						</tr>
-					</table>
+					<martian>"KO SFUJE DIL,NUZEN SLWDUYRIR JIL,KO NUZEN SGOCA SLWK,AL SNUAL HE"</martian>
+					<br />
+					<b>Pronunciation:</b>
+					<ipa>/cɔ sfuˈʤe ʃil nuˈʒen sləʃuˈjɾiɾ ʤil cɔ nuˈʒen sŋɔˈɲæ sləc æl snuˈæl ʔe/</ipa>
+					<br />
+					<p> <b>Martian word order</b>: ...and he stood, hat his holding, and his face wet, turned the wind to... </p>
 				</div>
+				<div id="togTrans" style="display: none">
+					<center>
+						Note: Translator does not automatically do word order and only finds exact matches in your dictionary (will
+						not find plurals, past-tense, etc.) However, all available affixes in the language may be used. Making the
+						translator smarter is a work in progress.
+						Sentence:
+					</center>
+					<textarea id="toTranslate" spellcheck="false" rows="4" cols="55" type="textarea" name="in"></textarea>
+					<input type="button" class="button0 but button10" value="Translate" onClick="doTrans()" />
+					Translation:
+					<p id="translated">
+						Affixes in this language:
+						ADJ.TO.ADV
+						<d>|</d> ADJ.TO.NOUN
+						<d>|</d> ADJ.TO.VERB
+						<d>|</d> AUG
+						<d>|</d> DIM
+						<d>|</d> DOER
+						<d>|</d> NOUN.A.ACC.DEF
+						<d>|</d> NOUN.A.ACC.INDEF
+						<d>|</d> NOUN.A.NOM.DEF
+						<d>|</d> NOUN.A.NOM.INDEF
+						<d>|</d> NOUN.IA.ACC.DEF
+						<d>|</d> NOUN.IA.ACC.INDEF
+						<d>|</d> NOUN.IA.NOM.DEF
+						<d>|</d> NOUN.IA.NOM.INDEF
+						<d>|</d> NOUN.TO.ADJ
+						<d>|</d> NOUN.TO.VERB
+						<d>|</d> PLACE
+						<d>|</d> VERB.PAST.A
+						<d>|</d> VERB.PAST.IA
+						<d>|</d> VERB.PERF
+						<d>|</d> VERB.PRES.A
+						<d>|</d> VERB.PRES.IA
+						<d>|</d> VERB.TO.ADJ
+						<d>|</d> VERB.TO.NOUN
+					</p>
+				</div>
+				<div id="lang-seed" style="display: none"> <span>Seed for this language:</span> 5892224008298317 </div>
 			</div>
-			<div id="phon-other">
-				<div id="syll-struct">
-					<p> Syllable structure: (C)(C)V(C) </p>
-					<p> Stress pattern: advanced </p>
-					<p> Word initial consonants: </p>
-					<ipa>/c, f, fl, j, l, m, n, s, sf, sl, sn, st, sŋ, t, x, ŋ, ɲ, ɾ, ʃ, ʒ, ʔ, ʤ, ʧ/</ipa>
-					<p> Mid-word consonants: </p>
-					<ipa>/c, f, j, jɲ, jɾ, l, lʧ, m, n, ns, s, t, ts, x, ŋ, ɲ, ɾ, ɾs, ʃ, ʒ, ʔ, ʤ, ʧ/</ipa>
-					<p> Word final consonants: </p>
-					<ipa>/c, l, m, n, s, ɲ, ɾ, ʃ, ʒ, ʤ/</ipa>
-					<div id="CFS" style="display: none;">
-						<p> Show frequency stats </p>
-						<p> Word initial: ɲ=22 ʃ=17 f=15 ŋ=13 ʔ=12 ʤ=11 c=11 l=10 m=10 n=9 x=9 ɾ=9 s=8 t=8 ʧ=8 j=8 ʒ=8 sf=22 fl=17 st=13 sŋ=11 sn=11 sl=10 </p>
-						<p> Mid-word: c=22 ʒ=17 x=15 ʤ=13 ɾ=12 ʃ=11 ʔ=11 ʧ=10 f=10 ɲ=9 ŋ=9 l=9 t=8 s=8 n=8 j=8 m=8 jɾ=22 ns=15 jɲ=12 ts=11 ɾs=9 lʧ=8Word final: c=22 ʒ=17 ʤ=13 ɾ=12 ʃ=11 ɲ=9 l=9 s=8 n=8 m=8 </p>
-					</div>
-				</div>
-				<div id="phon-rules">
-					<div id="phon-rules-info">
-						<div id="phonological_rules"> <p> Phonological rules (in order of application): </p> </div>
-						<div id="phon-rules-data">
-							<li class="b"> n → l / #_ </li>
-							<li class="b"> s → h / V_V </li>
-							<li class="b"> j → Ø / #_ </li>
-							<li class="b"> i → e / _C </li>
-							<li class="b"> N → w / S_S </li>
-							<li class="b"> m → w / #_ </li>
-							<li class="b"> ɲ → ŋ / _# </li>
-							<p> <a href="https://www.vulgarlang.com/phonological-rules" target="_blank">How to read phonological rules</a> </p>
-						</div>
-					</div>
-				</div>
+			<div id="lang-phon">
+				<h2 class="head-phon">Spelling & Phonology</h2>
 				<div id="spell-rules">
 					<div id="spell-rules-info">
 						<div id="spelling_rules"> <p> Spelling rules: </p> </div>
 						<div id="spell-rules-data"></div>
 					</div>
 				</div>
+				<div id="consonants">
+					<div id="cons-inv"></div>
+					<div id="bigcontab" class="table-tab">
+						<p> Consonant inventory: <ipa>/c f j l m n s t x ŋ ɲ ɾ ʃ ʒ ʔ ʤ ʧ/</ipa>
+						</p>
+						<table>
+							<tr>
+								<th>↓Manner/Place→</th>
+								<th>Bilabial</th>
+								<th>Labiodental</th>
+								<th>Alveolar</th>
+								<th>Palato-alveolar</th>
+								<th>Palatal</th>
+								<th>Velar</th>
+								<th>Glottal</th>
+							</tr>
+							<tr>
+								<td>Nasal</td>
+								<td align="center">m</td>
+								<td align="center"></td>
+								<td align="center">n</td>
+								<td align="center"></td>
+								<td align="center">ɲ</td>
+								<td align="center">ŋ</td>
+								<td align="center"></td>
+							</tr>
+							<tr>
+								<td>Stop</td>
+								<td align="center"></td>
+								<td align="center"></td>
+								<td align="center">t</td>
+								<td align="center"></td>
+								<td align="center">c</td>
+								<td align="center"></td>
+								<td align="center">ʔ</td>
+							</tr>
+							<tr>
+								<td>Affricate</td>
+								<td align="center"></td>
+								<td align="center"></td>
+								<td align="center"></td>
+								<td align="center">ʧ ʤ</td>
+								<td align="center"></td>
+								<td align="center"></td>
+								<td align="center"></td>
+							</tr>
+							<tr>
+								<td>Fricative</td>
+								<td align="center"></td>
+								<td align="center">f</td>
+								<td align="center">s</td>
+								<td align="center">ʃ ʒ</td>
+								<td align="center"></td>
+								<td align="center">x</td>
+								<td align="center"></td>
+							</tr>
+							<tr>
+								<td>Approximant</td>
+								<td align="center"></td>
+								<td align="center"></td>
+								<td align="center"></td>
+								<td align="center"></td>
+								<td align="center">j</td>
+								<td align="center"></td>
+								<td align="center"></td>
+							</tr>
+							<tr>
+								<td>Tap</td>
+								<td align="center"></td>
+								<td align="center"></td>
+								<td align="center">ɾ</td>
+								<td align="center"></td>
+								<td align="center"></td>
+								<td align="center"></td>
+								<td align="center"></td>
+							</tr>
+							<tr>
+								<td>Lateral approximant</td>
+								<td align="center"></td>
+								<td align="center"></td>
+								<td align="center">l</td>
+								<td align="center"></td>
+								<td align="center"></td>
+								<td align="center"></td>
+								<td align="center"></td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<div id="vowels">
+					<div id="vow-inv">
+						<p> Vowel inventory: <ipa>/e i u æ ɔ ə/</ipa>
+						</p>
+					</div>
+					<div id="VFS" style="display: none;">
+						<p>Show frequency stats</p>
+						<p>æ=8 e=6 i=5 ɔ=5 u=5 ə=4</p>
+					</div>
+					<div id="bigvowtab">
+						<br />
+						<table id="vowel-table" style="border-style: solid;">
+							<tr>
+								<th colspan="2">IPA vowel chart</th>
+							</tr>
+							<tr>
+								<td colspan="2" style="text-align:center">
+									<table
+										style="position: relative; line-height:1.4em;background:transparent; background:#F9F9F9; margin:0em auto 0em auto;">
+										<tr style="text-align:center;">
+											<td></td>
+											<td style="width:64px;"> <span style="position:relative;">Front</span> </td>
+											<td style="width:62px;">Near-​front</td>
+											<td style="width:64px;">Central</td>
+											<td style="width:62px;">Near-​back</td>
+											<td style="width:64px;">Back</td>
+										</tr>
+										<tr>
+											<td style="text-align:right;"> <b>High</b> </td>
+											<td colspan="5" rowspan="7">
+												<div style="position:relative;">
+													<img alt="Blank vowel trapezoid.svg"
+														src="https://www.vulgarlang.com/images/320px-Blank_vowel_trapezoid.svg.png" height="224"
+														width="320" data-file-height="700" data-file-width="1000"
+														srcset="https://www.vulgarlang.com/images/480px-Blank_vowel_trapezoid.svg.png 1.5x, https://www.vulgarlang.com/images/640px-Blank_vowel_trapezoid.svg.png 2x" />
+													<div style="background:transparent; position:absolute; top:0px; left:0px;">
+														<table id="vowel-graph">
+															<tr>
+																<td>
+																	<div style="top:8px; left:38px;">
+																		<span
+																			style="position:absolute; left:0px; text-align:right; background:transparent;">
+																			<span style="background:#F9F9F9; padding:0px 1px 0px 2px;">i&#160;&#160; </span>
+																		</span>
+																	</div>
+																	<div style="top:8px; left:163px;">
+																		<span
+																			style="position:absolute; left:0px; text-align:right; background:transparent;">
+																			<span style="background:transparent; padding:0px 1px 0px 2px;">&#160;&#160;
+																			</span>
+																		</span>
+																	</div>
+																	<div style="top:8px; left:285px;">
+																		<span
+																			style="position:absolute; left:0px; text-align:right; background:transparent;">
+																			<span style="background:#F9F9F9; padding:0px 1px 0px 2px;">&#160;&#160;u </span>
+																		</span>
+																	</div>
+																	<div style="top:39px; left:120px;">
+																		<span
+																			style="position:absolute; left:0px; text-align:right; background:transparent;">
+																			<span style="background:transparent; padding:0px 1px 0px 2px;">&#160;&#160;
+																			</span>
+																		</span>
+																	</div>
+																	<div style="top:39px; left:175px;">
+																		<span
+																			style="position:absolute; left:0px; text-align:right; background:transparent;">
+																			<span style="background:transparent; padding:0px 1px 0px 2px;">&#160;&#160;
+																			</span>
+																		</span>
+																	</div>
+																	<div style="top:39px; left:230px;">
+																		<span
+																			style="position:absolute; left:0px; text-align:right; background:transparent;">
+																			<span style="background:transparent; padding:0px 1px 0px 2px;">&#160;&#160;
+																			</span>
+																		</span>
+																	</div>
+																	<div style="top:72px; left:74px;">
+																		<span
+																			style="position:absolute; left:0px; text-align:right; background:transparent;">
+																			<span style="background:#F9F9F9; padding:0px 1px 0px 2px;">e&#160;&#160; </span>
+																		</span>
+																	</div>
+																	<div style="top:72px; left:181px;">
+																		<span
+																			style="position:absolute; left:0px; text-align:right; background:transparent;">
+																			<span style="background:transparent; padding:0px 1px 0px 2px;">&#160;&#160;
+																			</span>
+																		</span>
+																	</div>
+																	<div style="top:72px; left:285px;">
+																		<span
+																			style="position:absolute; left:0px; text-align:right; background:transparent;">
+																			<span style="background:transparent; padding:0px 1px 0px 2px;">&#160;&#160;
+																			</span>
+																		</span>
+																	</div>
+																	<div style="top:103px; left:95px;">
+																		<span
+																			style="position:absolute; left:0px; text-align:right; background:transparent;">
+																			<span style="background:transparent; padding:0px 1px 0px 2px;">&#160;&#160;
+																			</span>
+																		</span>
+																	</div>
+																	<div style="top:103px; left:197px;">
+																		<span
+																			style="position:absolute; left:0px; text-align:right; background:transparent;">
+																			<span style="background:#F9F9F9; padding:0px 1px 0px 2px;">ə&#160;&#160; </span>
+																		</span>
+																	</div>
+																	<div style="top:103px; left:285px;">
+																		<span
+																			style="position:absolute; left:0px; text-align:right; background:transparent;">
+																			<span style="background:transparent; padding:0px 1px 0px 2px;">&#160;&#160;
+																			</span>
+																		</span>
+																	</div>
+																	<div style="top:136px; left:119px;">
+																		<span
+																			style="position:absolute; left:0px; text-align:right; background:transparent;">
+																			<span style="background:transparent; padding:0px 1px 0px 2px;">&#160;&#160;
+																			</span>
+																		</span>
+																	</div>
+																	<div style="top:136px; left:202px;">
+																		<span
+																			style="position:absolute; left:0px; text-align:right; background:transparent;">
+																			<span style="background:transparent; padding:0px 1px 0px 2px;">&#160;&#160;
+																			</span>
+																		</span>
+																	</div>
+																	<div style="top:136px; left:285px;">
+																		<span
+																			style="position:absolute; left:0px; text-align:right; background:transparent;">
+																			<span style="background:#F9F9F9; padding:0px 1px 0px 2px;">&#160;&#160;ɔ </span>
+																		</span>
+																	</div>
+																	<div style="top:167px; left:133px;">
+																		<span
+																			style="position:absolute; left:0px; text-align:right; background:transparent;">
+																			<span style="background:#F9F9F9; padding:0px 1px 0px 2px;">æ&#160;&#160; </span>
+																		</span>
+																	</div>
+																	<div style="top:167px; left:212px;">
+																		<span
+																			style="position:absolute; left:0px; text-align:right; background:transparent;">
+																			<span style="background:transparent; padding:0px 1px 0px 2px;">&#160;&#160;
+																			</span>
+																		</span>
+																	</div>
+																	<div style="top:199px; left:160px;">
+																		<span
+																			style="position:absolute; left:0px; text-align:right; background:transparent;">
+																			<span style="background:transparent; padding:0px 1px 0px 2px;">&#160;&#160;
+																			</span>
+																		</span>
+																	</div>
+																	<div style="top:199px; left:223px;">
+																		<span
+																			style="position:absolute; left:0px; text-align:right; background:transparent;">
+																			<span style="background:transparent; padding:0px 1px 0px 2px;">&#160;&#160;
+																			</span>
+																		</span>
+																	</div>
+																	<div style="top:199px; left:286px;">
+																		<span
+																			style="position:absolute; left:0px; text-align:right; background:transparent;">
+																			<span style="background:transparent; padding:0px 1px 0px 2px;">&#160;&#160;
+																			</span>
+																		</span>
+																	</div>
+																</td>
+															</tr>
+														</table>
+													</div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td style="text-align:right;">Near-&nbsp;high</td>
+										</tr>
+										<tr>
+											<td style="text-align:right;">High-&nbsp;mid</td>
+										</tr>
+										<tr>
+											<td style="text-align:right;"> <b>Mid</b> </td>
+										</tr>
+										<tr>
+											<td style="text-align:right;">Low-&nbsp;mid</td>
+										</tr>
+										<tr>
+											<td style="text-align:right;">Near-&nbsp;Low</td>
+										</tr>
+										<tr>
+											<td style="height:32px; text-align:right;"> <b>Low</b> </td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<div id="phon-other">
+					<div id="syll-struct">
+						<p> Syllable structure: (C)(C)V(C) </p>
+						<p> Stress pattern: advanced </p>
+						<p> Word initial consonants: </p>
+						<ipa>/c, f, fl, j, l, m, n, s, sf, sl, sn, st, sŋ, t, x, ŋ, ɲ, ɾ, ʃ, ʒ, ʔ, ʤ, ʧ/</ipa>
+						<p> Mid-word consonants: </p>
+						<ipa>/c, f, j, jɲ, jɾ, l, lʧ, m, n, ns, s, t, ts, x, ŋ, ɲ, ɾ, ɾs, ʃ, ʒ, ʔ, ʤ, ʧ/</ipa>
+						<p> Word final consonants: </p>
+						<ipa>/c, l, m, n, s, ɲ, ɾ, ʃ, ʒ, ʤ/</ipa>
+						<div id="CFS" style="display: none;">
+							<p> Show frequency stats </p>
+							<p> Word initial: ɲ=22 ʃ=17 f=15 ŋ=13 ʔ=12 ʤ=11 c=11 l=10 m=10 n=9 x=9 ɾ=9 s=8 t=8 ʧ=8 j=8 ʒ=8 sf=22 fl=17
+								st=13 sŋ=11 sn=11 sl=10 </p>
+							<p> Mid-word: c=22 ʒ=17 x=15 ʤ=13 ɾ=12 ʃ=11 ʔ=11 ʧ=10 f=10 ɲ=9 ŋ=9 l=9 t=8 s=8 n=8 j=8 m=8 jɾ=22 ns=15
+								jɲ=12 ts=11 ɾs=9 lʧ=8Word final: c=22 ʒ=17 ʤ=13 ɾ=12 ʃ=11 ɲ=9 l=9 s=8 n=8 m=8 </p>
+						</div>
+					</div>
+					<div id="phon-rules">
+						<div id="phon-rules-info">
+							<div id="phonological_rules">
+								<p> Phonological rules (in order of application): </p>
+							</div>
+							<div id="phon-rules-data">
+								<li class="b"> n → l / #_ </li>
+								<li class="b"> s → h / V_V </li>
+								<li class="b"> j → Ø / #_ </li>
+								<li class="b"> i → e / _C </li>
+								<li class="b"> N → w / S_S </li>
+								<li class="b"> m → w / #_ </li>
+								<li class="b"> ɲ → ŋ / _# </li>
+								<p> <a href="https://www.vulgarlang.com/phonological-rules" target="_blank">How to read phonological
+										rules</a> </p>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
-		</div>
-		<div id="lang-grammar">
-			<h2 class="head-grammar">Grammar</h2>
-			<div id="main-word-order">
-				<p> Main word order: Object-Subject-Verb-Oblique. "Mary opened the door with a key" turns into </p>
-				<pos>The door Mary opened with a key.</pos>
-				<p> Adjective order: Adjectives are positioned after the noun. </p>
-				<p> Adposition: postpositions </p>
-			</div>
-			<br />
-			<div class="table-tab">
-				<h2>Noun</h2>
-				<p> Nouns form plural with separate plural word: </p>
-				<table>
-					<tr>
-						<td> <b>Plural</b> </td>
-						<td>
-							<martian>YE</martian>
-							<ipa>/je/</ipa>
-							<br />
-							<i>plural particle</i>
-						</td>
-					</tr>
-				</table>
-				<p> Nouns have two cases: </p>
-				<p> <b>Nominative</b> is the doer of a verb: <b>dog</b> bites man </p>
-				<p> <b>Accusative</b> is the done-to of a verb: man bites <b>dog</b> </p>
-				<h3>Nominative</h3>
-				<table>
-					<tr>
-						<th></th>
-						<th>Animate</th>
-						<th>Inanimate</th>
-					</tr>
-					<tr>
-						<td> <b>Definite</b> </td>
-						<td>
-							<p> Suffix <ipa>/-æ/</ipa> </p>
-							<martian>ROSOQUA</martian>
-							<ipa>/ɾɔsɔxuˈæ/</ipa>
-						</td>
-						<td>
-							<p> Suffix <ipa>/-e/</ipa> </p>
-							<martian>ROSOQUE</martian>
-							<ipa>/ɾɔsɔxuˈe/</ipa>
-						</td>
-					</tr>
-					<tr>
-						<td> <b>Indefinite</b> </td>
-						<td>
-							<p> Suffix <ipa>/-(ə)l/</ipa> </p>
-							<martian>ROSOQUL</martian>
-							<ipa>/ɾɔsɔˈxul/</ipa>
-						</td>
-						<td>
-							<p> Suffix <ipa>/-u/</ipa> </p>
-							<martian>ROSOQUU</martian>
-							<ipa>/ɾɔsɔˈxuu/</ipa>
-						</td>
-					</tr>
-				</table>
-				<h3>Accusative</h3>
-				<table>
-					<tr>
-						<th></th>
-						<th>Animate</th>
-						<th>Inanimate</th>
-					</tr>
-					<tr>
-						<td> <b>Definite</b> </td>
-						<td>
-							<p> Suffix <ipa>/-(e)tsɔ/</ipa> </p>
-							<martian>ROSOQUTSO</martian>
-							<ipa>/ɾɔsɔxutˈsɔ/</ipa>
-						</td>
-						<td>
-							<p> Suffix <ipa>/-(u)c/</ipa> </p>
-							<martian>ROSOQUK</martian>
-							<ipa>/ɾɔsɔˈxuc/</ipa>
-						</td>
-					</tr>
-					<tr>
-						<td> <b>Indefinite</b> </td>
-						<td>
-							<p> Suffix <ipa>/-(i)xə/</ipa> </p>
-							<martian>ROSOQUQW</martian>
-							<ipa>/ɾɔsɔxuˈxə/</ipa>
-						</td>
-						<td>
-							<p> Suffix <ipa>/-(æ)ɲ/</ipa> </p>
-							<martian>ROSOQUC</martian>
-							<ipa>/ɾɔsɔxuˈɲ/</ipa>
-						</td>
-					</tr>
-				</table>
-			</div>
-			<div class="table-tab">
-				<h2>Pronouns</h2>
-				<table>
-					<tr>
-						<th></th>
-						<th>Nominative</th>
-						<th>Accusative</th>
-					</tr>
-					<tr>
-						<td> <b>1st singular</b>  </td>
-						<td>
-							<martian>LW</martian>
-							<ipa>/lə/</ipa>
-							<br />
-							<i>I</i>
-						</td>
-						<td>
-							<martian>HE</martian>
-							<ipa>/ʔe/</ipa>
-							<br />
-							<i>me</i>
-						</td>
-					</tr>
-					<tr>
-						<td> <b>2nd singular</b> </td>
-						<td>
-							<martian>FWZ</martian>
-							<ipa>/fəʒ/</ipa>
-							<br />
-							<i>you</i>
-						</td>
-						<td>
-							<martian>RO</martian>
-							<ipa>/ɾɔ/</ipa>
-							<br />
-							<i>you</i>
-						</td>
-					</tr>
-					<tr>
-						<td> <b>3rd singular Animate</b> </td>
-						<td>
-							<martian>AZ</martian>
-							<ipa>/æʒ/</ipa>
-							<br />
-							<i>it</i>
-						</td>
-						<td>
-							<martian>JI</martian>
-							<ipa>/ʤi/</ipa>
-							<br />
-							<i>it</i>
-						</td>
-					</tr>
-					<tr>
-						<td> <b>3rd singular Inanimate</b> </td>
-						<td>
-							<martian>FLWS</martian>
-							<ipa>/fləs/</ipa>
-							<br />
-							<i>it</i>
-						</td>
-						<td>
-							<martian>A</martian>
-							<ipa>/æ/</ipa>
-							<br />
-							<i>it</i>
-						</td>
-					</tr>
-					<tr>
-						<td> <b>1st plural inclusive</b> </td>
-						<td>
-							<martian>FLWD</martian>
-							<ipa>/fləʃ/</ipa>
-							<br />
-							<i>we (including you)</i>
-						</td>
-						<td>
-							<martian>SUZ</martian>
-							<ipa>/suʒ/</ipa>
-							<br />
-							<i>us (including you)</i>
-						</td>
-					</tr>
-					<tr>
-						<td> <b>1st plural exclusive</b> </td>
-						<td>
-							<martian>NE</martian>
-							<ipa>/ne/</ipa>
-							<br />
-							<i>we (excluding you)</i>
-						</td>
-						<td>
-							<martian>E</martian>
-							<ipa>/e/</ipa>
-							<br />
-							<i>us (excluding you)</i>
-						</td>
-					</tr>
-					<tr>
-						<td> <b>2nd plural</b> </td>
-						<td>
-							<martian>DIZ</martian>
-							<ipa>/ʃiʒ/</ipa>
-							<br />
-							<i>you (all)</i>
-						</td>
-						<td>
-							<martian>STEN</martian>
-							<ipa>/sten/</ipa>
-							<br />
-							<i>you (all)</i>
-						</td>
-					</tr>
-					<tr>
-						<td> <b>3rd plural</b> </td>
-						<td>
-							<martian>STE</martian>
-							<ipa>/ste/</ipa>
-							<br />
-							<i>they</i>
-						</td>
-						<td>
-							<martian>FWN</martian>
-							<ipa>/fən/</ipa>
-							<br />
-							<i>them</i>
-						</td>
-					</tr>
-				</table>
-			</div>
-			<div class="table-tab">
-				<h2>Verbs</h2>
-				<p> Future tense is indicated with the word: </p>
-				<table>
-					<tr>
-						<td> <b>Future particle</b> </td>
-						<td>
-							<martian>ZE</martian>
-							<ipa>/ʒe/</ipa>
-							<br />
-							<i>future tense particle</i>
-						</td>
-					</tr>
-				</table>
-				<p> Verbs are conjugated depending on the gender of the doer of the verb. </p>
-				<h3></h3>
-				<table>
-					<tr>
-						<th></th>
-						<th>Present</th>
-						<th>Past</th>
-					</tr>
-					<tr>
-						<td> <b>Animate</b> </td>
-						<td>
-							<p> Suffix <ipa>/-un/</ipa> </p>
-							<martian>SFUJOHOKUN</martian>
-							<ipa>/sfuʤɔʔɔˈcun/</ipa>
-						</td>
-						<td>
-							<p> Suffix <ipa>/-iʒ/</ipa> </p>
-							<martian>SFUJOHOKIZ</martian>
-							<ipa>/sfuʤɔʔɔˈciʒ/</ipa>
-						</td>
-					</tr>
-					<tr>
-						<td> <b>Inanimate</b> </td>
-						<td>
-							<p> Suffix <ipa>/-(ə)xə/</ipa> </p>
-							<martian>SFUJOHOKWQW</martian>
-							<ipa>/sfuʤɔʔɔcəˈxə/</ipa>
-						</td>
-						<td>
-							<p> Suffix <ipa>/-(æ)s/</ipa> </p>
-							<martian>SFUJOHOKAS</martian>
-							<ipa>/sfuʤɔʔɔˈcæs/</ipa>
-						</td>
-					</tr>
-				</table>
+			<div id="lang-grammar">
+				<h2 class="head-grammar">Grammar</h2>
+				<div id="main-word-order">
+					<p> Main word order: Object-Subject-Verb-Oblique. "Mary opened the door with a key" turns into </p>
+					<pos>The door Mary opened with a key.</pos>
+					<p> Adjective order: Adjectives are positioned after the noun. </p>
+					<p> Adposition: postpositions </p>
+				</div>
 				<br />
-			</div>
-			<div class="table-tab">
-				<h3>Perfect aspect</h3>
-				<p> Perfect aspect in English is exemplified in ‘I have read this book’, </p>
-				<p> which expresses an event that took place before the time spoken </p>
-				<p> but which has an effect on or is in some way still relevant to the present. </p>
-				<p> In Martian, the perfect is constructed with an affix </p>
-				<table>
-					<tr>
-						<td> <b>Perfect</b> </td>
-						<td>
-							<p> Suffix <ipa>/-(æ)jɾu/</ipa> </p>
-							<martian>SFUJOHOKAYRU</martian>
-							<ipa>/sfuʤɔʔɔcæˈjɾu/</ipa>
-						</td>
-					</tr>
-				</table>
-			</div>
-			<div id="lang-der-morph">
-				<h3 class="head-der-morph">Derivational morphology</h3>
+				<div class="table-tab">
+					<h2>Noun</h2>
+					<p> Nouns form plural with separate plural word: </p>
+					<table>
+						<tr>
+							<td> <b>Plural</b> </td>
+							<td>
+								<martian>YE</martian>
+								<ipa>/je/</ipa>
+								<br />
+								<i>plural particle</i>
+							</td>
+						</tr>
+					</table>
+					<p> Nouns have two cases: </p>
+					<p> <b>Nominative</b> is the doer of a verb: <b>dog</b> bites man </p>
+					<p> <b>Accusative</b> is the done-to of a verb: man bites <b>dog</b> </p>
+					<h3>Nominative</h3>
+					<table>
+						<tr>
+							<th></th>
+							<th>Animate</th>
+							<th>Inanimate</th>
+						</tr>
+						<tr>
+							<td> <b>Definite</b> </td>
+							<td>
+								<p> Suffix <ipa>/-æ/</ipa>
+								</p>
+								<martian>ROSOQUA</martian>
+								<ipa>/ɾɔsɔxuˈæ/</ipa>
+							</td>
+							<td>
+								<p> Suffix <ipa>/-e/</ipa>
+								</p>
+								<martian>ROSOQUE</martian>
+								<ipa>/ɾɔsɔxuˈe/</ipa>
+							</td>
+						</tr>
+						<tr>
+							<td> <b>Indefinite</b> </td>
+							<td>
+								<p> Suffix <ipa>/-(ə)l/</ipa>
+								</p>
+								<martian>ROSOQUL</martian>
+								<ipa>/ɾɔsɔˈxul/</ipa>
+							</td>
+							<td>
+								<p> Suffix <ipa>/-u/</ipa>
+								</p>
+								<martian>ROSOQUU</martian>
+								<ipa>/ɾɔsɔˈxuu/</ipa>
+							</td>
+						</tr>
+					</table>
+					<h3>Accusative</h3>
+					<table>
+						<tr>
+							<th></th>
+							<th>Animate</th>
+							<th>Inanimate</th>
+						</tr>
+						<tr>
+							<td> <b>Definite</b> </td>
+							<td>
+								<p> Suffix <ipa>/-(e)tsɔ/</ipa>
+								</p>
+								<martian>ROSOQUTSO</martian>
+								<ipa>/ɾɔsɔxutˈsɔ/</ipa>
+							</td>
+							<td>
+								<p> Suffix <ipa>/-(u)c/</ipa>
+								</p>
+								<martian>ROSOQUK</martian>
+								<ipa>/ɾɔsɔˈxuc/</ipa>
+							</td>
+						</tr>
+						<tr>
+							<td> <b>Indefinite</b> </td>
+							<td>
+								<p> Suffix <ipa>/-(i)xə/</ipa>
+								</p>
+								<martian>ROSOQUQW</martian>
+								<ipa>/ɾɔsɔxuˈxə/</ipa>
+							</td>
+							<td>
+								<p> Suffix <ipa>/-(æ)ɲ/</ipa>
+								</p>
+								<martian>ROSOQUC</martian>
+								<ipa>/ɾɔsɔxuˈɲ/</ipa>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="table-tab">
+					<h2>Pronouns</h2>
+					<table>
+						<tr>
+							<th></th>
+							<th>Nominative</th>
+							<th>Accusative</th>
+						</tr>
+						<tr>
+							<td> <b>1st singular</b> </td>
+							<td>
+								<martian>LW</martian>
+								<ipa>/lə/</ipa>
+								<br />
+								<i>I</i>
+							</td>
+							<td>
+								<martian>HE</martian>
+								<ipa>/ʔe/</ipa>
+								<br />
+								<i>me</i>
+							</td>
+						</tr>
+						<tr>
+							<td> <b>2nd singular</b> </td>
+							<td>
+								<martian>FWZ</martian>
+								<ipa>/fəʒ/</ipa>
+								<br />
+								<i>you</i>
+							</td>
+							<td>
+								<martian>RO</martian>
+								<ipa>/ɾɔ/</ipa>
+								<br />
+								<i>you</i>
+							</td>
+						</tr>
+						<tr>
+							<td> <b>3rd singular Animate</b> </td>
+							<td>
+								<martian>AZ</martian>
+								<ipa>/æʒ/</ipa>
+								<br />
+								<i>it</i>
+							</td>
+							<td>
+								<martian>JI</martian>
+								<ipa>/ʤi/</ipa>
+								<br />
+								<i>it</i>
+							</td>
+						</tr>
+						<tr>
+							<td> <b>3rd singular Inanimate</b> </td>
+							<td>
+								<martian>FLWS</martian>
+								<ipa>/fləs/</ipa>
+								<br />
+								<i>it</i>
+							</td>
+							<td>
+								<martian>A</martian>
+								<ipa>/æ/</ipa>
+								<br />
+								<i>it</i>
+							</td>
+						</tr>
+						<tr>
+							<td> <b>1st plural inclusive</b> </td>
+							<td>
+								<martian>FLWD</martian>
+								<ipa>/fləʃ/</ipa>
+								<br />
+								<i>we (including you)</i>
+							</td>
+							<td>
+								<martian>SUZ</martian>
+								<ipa>/suʒ/</ipa>
+								<br />
+								<i>us (including you)</i>
+							</td>
+						</tr>
+						<tr>
+							<td> <b>1st plural exclusive</b> </td>
+							<td>
+								<martian>NE</martian>
+								<ipa>/ne/</ipa>
+								<br />
+								<i>we (excluding you)</i>
+							</td>
+							<td>
+								<martian>E</martian>
+								<ipa>/e/</ipa>
+								<br />
+								<i>us (excluding you)</i>
+							</td>
+						</tr>
+						<tr>
+							<td> <b>2nd plural</b> </td>
+							<td>
+								<martian>DIZ</martian>
+								<ipa>/ʃiʒ/</ipa>
+								<br />
+								<i>you (all)</i>
+							</td>
+							<td>
+								<martian>STEN</martian>
+								<ipa>/sten/</ipa>
+								<br />
+								<i>you (all)</i>
+							</td>
+						</tr>
+						<tr>
+							<td> <b>3rd plural</b> </td>
+							<td>
+								<martian>STE</martian>
+								<ipa>/ste/</ipa>
+								<br />
+								<i>they</i>
+							</td>
+							<td>
+								<martian>FWN</martian>
+								<ipa>/fən/</ipa>
+								<br />
+								<i>them</i>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="table-tab">
+					<h2>Verbs</h2>
+					<p> Future tense is indicated with the word: </p>
+					<table>
+						<tr>
+							<td> <b>Future particle</b> </td>
+							<td>
+								<martian>ZE</martian>
+								<ipa>/ʒe/</ipa>
+								<br />
+								<i>future tense particle</i>
+							</td>
+						</tr>
+					</table>
+					<p> Verbs are conjugated depending on the gender of the doer of the verb. </p>
+					<h3></h3>
+					<table>
+						<tr>
+							<th></th>
+							<th>Present</th>
+							<th>Past</th>
+						</tr>
+						<tr>
+							<td> <b>Animate</b> </td>
+							<td>
+								<p> Suffix <ipa>/-un/</ipa>
+								</p>
+								<martian>SFUJOHOKUN</martian>
+								<ipa>/sfuʤɔʔɔˈcun/</ipa>
+							</td>
+							<td>
+								<p> Suffix <ipa>/-iʒ/</ipa>
+								</p>
+								<martian>SFUJOHOKIZ</martian>
+								<ipa>/sfuʤɔʔɔˈciʒ/</ipa>
+							</td>
+						</tr>
+						<tr>
+							<td> <b>Inanimate</b> </td>
+							<td>
+								<p> Suffix <ipa>/-(ə)xə/</ipa>
+								</p>
+								<martian>SFUJOHOKWQW</martian>
+								<ipa>/sfuʤɔʔɔcəˈxə/</ipa>
+							</td>
+							<td>
+								<p> Suffix <ipa>/-(æ)s/</ipa>
+								</p>
+								<martian>SFUJOHOKAS</martian>
+								<ipa>/sfuʤɔʔɔˈcæs/</ipa>
+							</td>
+						</tr>
+					</table>
+					<br />
+				</div>
+				<div class="table-tab">
+					<h3>Perfect aspect</h3>
+					<p> Perfect aspect in English is exemplified in ‘I have read this book’, </p>
+					<p> which expresses an event that took place before the time spoken </p>
+					<p> but which has an effect on or is in some way still relevant to the present. </p>
+					<p> In Martian, the perfect is constructed with an affix </p>
+					<table>
+						<tr>
+							<td> <b>Perfect</b> </td>
+							<td>
+								<p> Suffix <ipa>/-(æ)jɾu/</ipa>
+								</p>
+								<martian>SFUJOHOKAYRU</martian>
+								<ipa>/sfuʤɔʔɔcæˈjɾu/</ipa>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div id="lang-der-morph">
+					<h3 class="head-der-morph">Derivational morphology</h3>
 					<ul>
 						<li>
-							<b> <not>Adjective → noun </not> </b>
-							<ul> <li> Suffix <ipa>/-eɲ/</ipa> </li> </ul>
+							<b>
+								<not>Adjective → noun </not>
+							</b>
+							<ul>
+								<li> Suffix <ipa>/-eɲ/</ipa>
+								</li>
+							</ul>
 						</li>
 						<li>
-							<b> <not>Noun → adjective </not> </b>
-							<ul> <li> Suffix <ipa>/-(æ)ʃ/</ipa> </li> </ul>
+							<b>
+								<not>Noun → adjective </not>
+							</b>
+							<ul>
+								<li> Suffix <ipa>/-(æ)ʃ/</ipa>
+								</li>
+							</ul>
 						</li>
 						<li>
-							<b> <not>Noun → verb </not> </b>
-							<ul> <li> Suffix <ipa>/-(ɔ)xə/</ipa> </li> </ul>
+							<b>
+								<not>Noun → verb </not>
+							</b>
+							<ul>
+								<li> Suffix <ipa>/-(ɔ)xə/</ipa>
+								</li>
+							</ul>
 						</li>
 						<li>
-							<b> <not>Verb → noun </not> </b>
-							<ul> <li> Suffix <ipa>/-(i)ɲ/</ipa> </li> </ul>
+							<b>
+								<not>Verb → noun </not>
+							</b>
+							<ul>
+								<li> Suffix <ipa>/-(i)ɲ/</ipa>
+								</li>
+							</ul>
 						</li>
 						<li>
-							<b> <not>Verb → adjective </not> </b>
-							<ul> <li> Suffix <ipa>/-(u)ʃ/</ipa> </li> </ul>
+							<b>
+								<not>Verb → adjective </not>
+							</b>
+							<ul>
+								<li> Suffix <ipa>/-(u)ʃ/</ipa>
+								</li>
+							</ul>
 						</li>
 						<li>
-							<b> <not>Adjective → verb </not> </b>
-							<ul> <li> Suffix <ipa>/-i/</ipa> </li> </ul>
+							<b>
+								<not>Adjective → verb </not>
+							</b>
+							<ul>
+								<li> Suffix <ipa>/-i/</ipa>
+								</li>
+							</ul>
 						</li>
 						<li>
-							<b> <not>Adjective → adverb </not> </b>
-							<ul> <li> Suffix <ipa>/-æ/</ipa> </li> </ul>
+							<b>
+								<not>Adjective → adverb </not>
+							</b>
+							<ul>
+								<li> Suffix <ipa>/-æ/</ipa>
+								</li>
+							</ul>
 						</li>
 						<li>
-							<b> <not>One who Xs (e.g. paint → painter) </not> </b>
-							<ul> <li> Suffix <ipa>/-(ɔ)xə/</ipa> </li> </ul>
+							<b>
+								<not>One who Xs (e.g. paint → painter) </not>
+							</b>
+							<ul>
+								<li> Suffix <ipa>/-(ɔ)xə/</ipa>
+								</li>
+							</ul>
 						</li>
 						<li>
-							<b> <not>Place of (e.g. wine → winery) </not> </b>
-							<ul> <li> Suffix <ipa>/-(æ)ʤ/</ipa> </li> </ul>
+							<b>
+								<not>Place of (e.g. wine → winery) </not>
+							</b>
+							<ul>
+								<li> Suffix <ipa>/-(æ)ʤ/</ipa>
+								</li>
+							</ul>
 						</li>
 						<li>
-							<b> <not>Diminutive </not> </b>
-							<ul> <li> Suffix <ipa>/-(æ)ʤ/</ipa> </li> </ul>
+							<b>
+								<not>Diminutive </not>
+							</b>
+							<ul>
+								<li> Suffix <ipa>/-(æ)ʤ/</ipa>
+								</li>
+							</ul>
 						</li>
 						<li>
-							<b> <not>Augmentative </not> </b>
-							<ul> <li> Suffix <ipa>/-(u)ʤæ/</ipa> </li> </ul>
+							<b>
+								<not>Augmentative </not>
+							</b>
+							<ul>
+								<li> Suffix <ipa>/-(u)ʤæ/</ipa>
+								</li>
+							</ul>
 						</li>
 					</ul>
+				</div>
 			</div>
-		</div>
-		<div id="lang-lexi">
-			<center> Key: <r>spelling</r> <ipa>/pronunciation/</ipa> <e> <pos>part of speech.</pos> definition(s) </e> </center>
-			<center>
-				<button id="show-martian"> Martian -> English </button>
-				<button id="show-english"> English -> Martian </button>
-			</center>
-			<div id="martian-dicionary">
-				<h2 class="head-lexi">Martian - English Dictionary</h2>
-				<ul class="lexilist"></ul>
-			</div>
-			<div id="english-dicionary">
-			<h2>English - Martian</h2>
-			<ul class="lexilist"></ul>
+			<div id="lang-lexi">
+				<center> Key: <r>spelling</r>
+					<ipa>/pronunciation/</ipa>
+					<e>
+						<pos>part of speech.</pos> definition(s)
+					</e>
+				</center>
+				<center>
+					<button id="show-martian"> Martian -> English </button>
+					<button id="show-english"> English -> Martian </button>
+				</center>
+				<div id="martian-dicionary">
+					<h2 class="head-lexi">Martian - English Dictionary</h2>
+					<ul class="lexilist"></ul>
+				</div>
+				<div id="english-dicionary">
+					<h2 class="head-lexi">English - Martian Dictionary</h2>
+					<ul class="lexilist"></ul>
+				</div>
 			</div>
 		</div>
 	</body>

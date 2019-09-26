@@ -58,29 +58,22 @@ header h1 {
   font-weight: none;
 }
 
-h2,
-h3 {
+r { font-weight: bold; }
+
+h2, h3 {
   font-size: 120%;
   margin: 0;
   padding: .25em 0 .5em;
 }
 
-h1,
-h2 {
+h1, h2 {
   text-align: center;
   font-family: 'Black Ops One', serif, cursive;
 }
 
-h1,
-h2,
-h3,
-h4 {
-  text-align: center;
-}
+h1, h2, h3, h4 { text-align: center; }
 
-h1 {
-  color: #821583;
-}
+h1 { color: #821583; }
 
 h2 {
   color: #A569BD;
@@ -97,14 +90,7 @@ h4 {
   font-family: 'Fugaz One', serif, cursive;
 }
 
-:not(header h1),
-h1,
-h2,
-h3,
-h4 {
-  color: #04C;
-  font-weight: bold;
-}
+:not(header h1), h1, h2, h3, h4 { color: #04C; font-weight: bold; }
 
 aside {
   position: fixed;
@@ -122,9 +108,7 @@ aside ul {
   padding-left: 0;
 }
 
-aside ul li {
-  padding-bottom: 0.5em;
-}
+aside ul li { padding-bottom: 0.5em; }
 
 aside p {
   margin: 0;
@@ -132,9 +116,7 @@ aside p {
   background-color: none;
 }
 
-p {
-  text-align: center;
-}
+p { text-align: center; }
 
 #top {
   margin: 0;
@@ -142,13 +124,9 @@ p {
   background-color: none;
 }
 
-a {
-  font-weight: bold;
-}
+a { font-weight: bold; }
 
-table,
-th,
-td {
+table, th, td {
   border: 1px solid black;
   border-collapse: collapse;
   text-align: center;
@@ -178,9 +156,7 @@ table {
   background: transparent;
 }
 
-#vowel-graph tr {
-  background-color: transparent;
-}
+#vowel-graph tr { background-color: transparent; }
 
 #vowel-graph tr span {
   position: absolute;
@@ -189,9 +165,7 @@ table {
   background: transparent
 }
 
-#vowel-graph tr span span {
-  padding: 0px 1px 0px 2px;
-}
+#vowel-graph tr span span { padding: 0px 1px 0px 2px; }
 
 #vowel-graph div {
   height: 1px;
@@ -208,8 +182,7 @@ table {
   font-weight: bold;
 }
 
-th,
-td {
+th, td {
   border: 1px dashed black;
   vertical-align: center;
   text-align: center;
@@ -221,28 +194,23 @@ th {
   color: #FFF;
 }
 
-tr:nth-child(odd),
-#verbs tr:nth-child(even) {
+tr:nth-child(odd), #verbs tr:nth-child(even) {
   background-color: #CCC;
 }
 
-tr:nth-child(even),
-#verbs tr:nth-child(odd) {
+tr:nth-child(even), #verbs tr:nth-child(odd) {
   background-color: #EEE;
 }
 
-br {
-  clear: left;
-}
+br { clear: left; }
 
-.right {
-  text-align: right;
-}
+.right { text-align: right; }
 
-#show-martian,
-#show-english {
-  cursor: pointer;
-}
+#show-martian, #show-english { cursor: pointer; }
+
+#spell-rules-data table { width: 100%; }
+
+#spell-rules { padding: 0px 20px 20px; }
 
 .backward {
   display: inline-block;

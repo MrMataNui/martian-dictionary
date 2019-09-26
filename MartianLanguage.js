@@ -1,12 +1,12 @@
 $(() => {
   let martianDicionary = '';
   let englishDicionary = '';
-const sorter = (a, b) => (a < b) ? -1 : (a > b) ? 1 : 0;
-let Martian = marsDitionary.Martian;
-let English = marsDitionary.English;
+  const sorter = (a, b) => (a < b) ? -1 : (a > b) ? 1 : 0;
+  let Martian = marsDitionary.Martian;
+  let English = marsDitionary.English;
 
-Martian = Martian.sort((a, b) => sorter(a.Martian, b.Martian));
-English = English.sort((a, b) => sorter(a.English, b.English));
+  Martian = Martian.sort((a, b) => sorter(a.Martian, b.Martian));
+  English = English.sort((a, b) => sorter(a.English, b.English));
   $.each(Martian, (i, word) => {
     martianDicionary += `<li>
 			<martian>${word.Martian}</martian>
@@ -18,7 +18,9 @@ English = English.sort((a, b) => sorter(a.English, b.English));
   $('#martian-dicionary ul').html(martianDicionary);
 
   $.each(English, (i, word) => {
-		if (word.English === 'i') { word.English = 'I'; }
+    if (word.English === 'i') {
+      word.English = 'I';
+    }
     let wordGet = `<b>${word.English}</b>
 		<pos>${word.POS}</pos>
 		<martian>${word.Martian}</martian>`;
@@ -46,12 +48,11 @@ English = English.sort((a, b) => sorter(a.English, b.English));
     $('#english-dicionary').show();
     $('#martian-dicionary').hide();
   });
-	let pronunciation = `<tr> <th>Pronunciation</th> <th>Spelling</th> </tr>`;
+  let sounds = `<th> Sound </th>`;
+  let letters = `<th> Letter </th>`;
   $.each(soundSymbol, (i, word) => {
-    pronunciation += `<tr>
-			<td> <ipa>/${word.sound}/</ipa> </td>
-			<td> <martian>${word.letter}</martian> </td>
-		</tr>`;
+    sounds += `<td> <ipa>/${word.sound}/</ipa> </td>`;
+    letters += `<td> <martian>${word.letter}</martian> </td>`;
   });
-	$('#spell-rules-data').html(`<table>${pronunciation}</table>`);
+  $('#spell-rules-data').html(`<table> <tr>${letters}</tr> <tr>${sounds}</tr> </table>`);
 });
