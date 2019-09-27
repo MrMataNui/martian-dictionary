@@ -13,10 +13,10 @@ $(() => {
   English = English.sort((a, b) => sorter(a.English, b.English));
   $.each(Martian, (i, word) => {
     martianDicionary += `<li>
-			<martian>${word.Martian}</martian>
-			<rom>(${word.romanization})</rom>
-			<ipa>${word.IPA}</ipa>
-			<pos>${word.POS}</pos>
+			<martian>${word.Martian}</martian> <b>|</b>
+			<rom>(${word.romanization})</rom> <b>|</b>
+			<ipa>${word.IPA}</ipa> <b>|</b>
+			<pos>${word.POS}</pos> <b>|</b>
 			<b>${word.English}</b>
 		</li>`;
   });
@@ -26,16 +26,16 @@ $(() => {
     if (word.English === 'i') {
       word.English = 'I';
     }
-    let wordGet = `<b>${word.English}</b>
-		<pos>${word.POS}</pos>
-		<martian>${word.Martian}</martian>
+    let wordGet = `<b>${word.English}</b> <b>|</b>
+		<pos>${word.POS}</pos> <b>|</b>
+		<martian>${word.Martian}</martian> <b>|</b>
 		<rom>(${word.romanization})</rom>`;
     if (word.POS2) {
-      wordGet += `<pos>${word.POS2}</pos> <martian>${word.Martian2}</martian>`;
+      wordGet += `<b>|</b> <pos>${word.POS2}</pos> <b>|</b> <martian>${word.Martian2}</martian>`;
       if (word.POS3) {
-        wordGet += `<pos>${word.POS3}</pos> <martian>${word.Martian3}</martian>`;
+        wordGet += `<b>|</b> <pos>${word.POS3}</pos> <b>|</b> <martian>${word.Martian3}</martian>`;
         if (word.POS4) {
-          wordGet += `<pos>${word.POS4}</pos> <martian>${word.Martian4}</martian>`;
+          wordGet += `<b>|</b> <pos>${word.POS4}</pos> <b>|</b> <martian>${word.Martian4}</martian>`;
         }
       }
     }
