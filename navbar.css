@@ -4,13 +4,16 @@
 	padding: 0;
 	overflow: hidden;
 	background-color: #333;
-	position: -webkit-sticky;	/* Safari */
+	position: -webkit-sticky; /* Safari */
 	position: sticky;
 	top: 0;
 	width: 100%;
 }
 
-#head-nav li { float: left; border-right: 1px solid #BBB; }
+#head-nav li:not(#home) {
+	float: left;
+	border-right: 1px solid #BBB;
+}
 
 #head-nav li a {
 	display: block;
@@ -20,6 +23,14 @@
 	text-decoration: none;
 }
 
-#head-nav li a:hover:not(.active) { background-color: #111; }
+#head-nav li a:hover:not(.active) {
+	background-color: #111;
+}
 
-#head-nav .active { background-color: #4CAF50; }
+#head-nav .active {
+	background-color: #4CAF50;
+}
+
+#home {
+	float: right;
+}
