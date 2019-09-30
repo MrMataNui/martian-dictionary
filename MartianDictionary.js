@@ -13,7 +13,7 @@ const soundSymbol = [
 	{ "sound": "m", "letter": "M", "romanization": "m" },
 	{ "sound": "n", "letter": "N", "romanization": "n" },
 	{ "sound": "ɔ", "letter": "O", "romanization": "o" },
-	{ "sound": "x", "letter": "Q", "romanization": "q" },
+	{ "sound": "x", "letter": "Q", "romanization": "kh" },
 	{ "sound": "ɾ", "letter": "R", "romanization": "r" },
 	{ "sound": "s", "letter": "S", "romanization": "s" },
 	{ "sound": "t", "letter": "T", "romanization": "t" },
