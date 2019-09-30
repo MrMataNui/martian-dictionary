@@ -4,15 +4,16 @@
 	padding: 0;
 	overflow: hidden;
 	background-color: #333;
-	position: -webkit-sticky; /* Safari */
+	/* position: fixed; */
+	position: -webkit-sticky;
 	position: sticky;
 	top: 0;
 	width: 100%;
 }
 
-#head-nav li:not(#home) {
+#head-nav li:not(.right) {
 	float: left;
-	border-right: 1px solid #BBB;
+	border-right: 1px solid #bbb;
 }
 
 #head-nav li a {
@@ -28,9 +29,9 @@
 }
 
 #head-nav .active {
-	background-color: #4CAF50;
+	background-color: #4caf50;
 }
 
-#home {
+.right {
 	float: right;
 }
