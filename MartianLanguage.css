@@ -38,11 +38,10 @@ footer p {
 	margin: 1em 0;
 }
 
-:not(header h1),
-h1 {
+:not(header h1), h1 {
 	font-size: 150%;
 	margin: 0;
-	padding: .5em 0 .25em;
+	padding: 0.5em 0 0.25em;
 }
 
 header {
@@ -52,7 +51,7 @@ header {
 
 header h1 {
 	margin: 0;
-	padding: .5em 0;
+	padding: 0.5em 0;
 	color: black;
 	font-family: serif;
 	font-weight: none;
@@ -63,7 +62,7 @@ r { font-weight: bold; }
 h2, h3 {
 	font-size: 120%;
 	margin: 0;
-	padding: .25em 0 .5em;
+	padding: 0.25em 0 0.5em;
 }
 
 h1, h2 {
@@ -75,29 +74,24 @@ h1, h2, h3, h4 { text-align: center; }
 
 h1 { color: #821583; }
 
-h2 {
-	color: #A569BD;
-	font-family: 'Audiowide', serif, cursive;
-}
+h2 { color: #A569BD; font-family: 'Audiowide', serif, cursive; }
 
-h3 {
-	color: #152283;
-	font-family: 'Fugaz One', serif, cursive;
-}
+h3 { color: #152283; font-family: 'Fugaz One', serif, cursive; }
 
-h4 {
-	color: #5f71fb;
-	font-family: 'Fugaz One', serif, cursive;
-}
+h4 { color: #5F71FB; font-family: 'Fugaz One', serif, cursive; }
 
-:not(header h1), h1, h2, h3, h4 { color: #04C; font-weight: bold; }
+:not(header h1),
+h1, h2, h3, h4 {
+	color: #04C;
+	font-weight: bold;
+}
 
 aside {
 	position: fixed;
 	float: left;
 	width: 16%;
 	margin: 0;
-	padding: 0 0 0 .5em;
+	padding: 0 0 0 0.5em;
 	border-right: 1px solid #DDD;
 	height: 100%;
 }
@@ -162,7 +156,6 @@ table {
 	position: absolute;
 	left: 0px;
 	text-align: right;
-	background: transparent
 }
 
 #vowel-graph tr span span { padding: 0px 1px 0px 2px; }
@@ -231,4 +224,61 @@ martian,
 	font-family: Martian;
 	font-size: 110%;
 	font-style: normal;
+}
+
+#consonants-table td {
+	align-self: center;
+}
+
+#vowel-table2 {
+	position: relative;
+	line-height: 1.4em;
+	background: transparent;
+	background: #F9F9F9;
+	margin: 0em auto 0em auto;
+}
+
+.span1 {
+	position: absolute;
+	left: 0px;
+	text-align: right;
+	background: transparent;
+}
+
+.span2 {
+	padding: 0px 1px 0px 2px;
+}
+
+span.span2.transparent {
+	background: transparent;
+}
+
+span.span2.color {
+	background: #F9F9F9;
+}
+
+dbq {
+	quotes: '“' '”';
+}
+
+dbq::before {
+	content: open-quote;
+}
+
+dbq::after {
+	content: close-quote;
+}
+
+q,
+.quotes {
+	quotes: '‘' '’';
+}
+q::before,
+.quotes::before {
+	content: open-quote;
+}
+
+q::after,
+.quotes::after {
+	content: close-quote;
 }
