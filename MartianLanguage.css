@@ -282,3 +282,7 @@ q::after,
 .quotes::after {
 	content: close-quote;
 }
+
+#lang-full {
+	margin-top: initial !important;
+}
