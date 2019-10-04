@@ -245,44 +245,22 @@ martian,
 	background: transparent;
 }
 
-.span2 {
-	padding: 0px 1px 0px 2px;
-}
+.span2 { padding: 0px 1px 0px 2px; }
 
-span.span2.transparent {
-	background: transparent;
-}
+span.span2.transparent { background: transparent; }
 
-span.span2.color {
-	background: #F9F9F9;
-}
+span.span2.color { background: #F9F9F9; }
 
-dbq {
-	quotes: '“' '”';
-}
+dbq { quotes: '“' '”'; }
 
-dbq::before {
-	content: open-quote;
-}
+dbq::before { content: open-quote; }
 
-dbq::after {
-	content: close-quote;
-}
+dbq::after { content: close-quote; }
 
-q,
-.quotes {
-	quotes: '‘' '’';
-}
-q::before,
-.quotes::before {
-	content: open-quote;
-}
+q, .quotes { quotes: '‘' '’'; }
 
-q::after,
-.quotes::after {
-	content: close-quote;
-}
+q::before, .quotes::before { content: open-quote; }
 
-#lang-full {
-	margin-top: initial !important;
-}
+q::after, .quotes::after { content: close-quote; }
+
+#lang-full { margin-top: initial !important; }
