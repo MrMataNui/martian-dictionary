@@ -13,14 +13,18 @@ $(() => {
 	$('#martian-dicionary').show();
 	$('#english-dicionary').hide();
 
-	$('#show-martian').click(getToggle);
-	$('#show-english').click(getToggle);
+	$('#show-martian').click(() => {
+		$('#martian-dicionary').show();
+		$('#english-dicionary').hide();
+	});
+	$('#show-english').click(() => {
+		$('#martian-dicionary').hide();
+		$('#english-dicionary').show();
+	});
 });
 
 function sorter(a, b) {
-	[a, b] = (a.IPA)
-		? [a.Martian, b.Martian]
-		: [a.English, b.English];
+	[a, b] = (a.IPA) ? [a.Martian, b.Martian] : [a.English, b.English];
 	return (a < b) ? -1 : 1;
 };
 
@@ -70,11 +74,6 @@ function getSpellingRules() {
 		letters += `<td> <martian>${word.letter}</martian> </td>`;
 	});
 	$('#spell-rules-data').html(`<table> <tr>${letters}</tr> <tr>${romanization}</tr> <tr>${sounds}</tr> </table>`);
-}
-
-function getToggle() {
-	$('#martian-dicionary').toggle();
-	$('#english-dicionary').toggle();
 }
 
 function englishRomanization(getWord) {
