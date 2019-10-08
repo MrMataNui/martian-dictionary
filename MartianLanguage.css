@@ -73,11 +73,8 @@ h1, h2 {
 h1, h2, h3, h4 { text-align: center; }
 
 h1 { color: #821583; }
-
 h2 { color: #A569BD; font-family: 'Audiowide', serif, cursive; }
-
 h3 { color: #152283; font-family: 'Fugaz One', serif, cursive; }
-
 h4 { color: #5F71FB; font-family: 'Fugaz One', serif, cursive; }
 
 :not(header h1),
@@ -187,13 +184,8 @@ th {
 	color: #FFF;
 }
 
-tr:nth-child(odd), #verbs tr:nth-child(even) {
-	background-color: #CCC;
-}
-
-tr:nth-child(even), #verbs tr:nth-child(odd) {
-	background-color: #EEE;
-}
+tr:nth-child(odd), #verbs tr:nth-child(even) { background-color: #CCC; }
+tr:nth-child(even), #verbs tr:nth-child(odd) { background-color: #EEE; }
 
 br { clear: left; }
 
@@ -219,16 +211,13 @@ br { clear: left; }
 	font-style: normal;
 }
 
-martian,
-.martian {
+martian, .martian {
 	font-family: Martian;
 	font-size: 110%;
 	font-style: normal;
 }
 
-#consonants-table td {
-	align-self: center;
-}
+#consonants-table td { align-self: center; }
 
 #vowel-table2 {
 	position: relative;
@@ -252,15 +241,9 @@ span.span2.transparent { background: transparent; }
 span.span2.color { background: #F9F9F9; }
 
 dbq { quotes: '“' '”'; }
-
-dbq::before { content: open-quote; }
-
-dbq::after { content: close-quote; }
-
 q, .quotes { quotes: '‘' '’'; }
 
-q::before, .quotes::before { content: open-quote; }
-
-q::after, .quotes::after { content: close-quote; }
+dbq::before, q::before, .quotes::before { content: open-quote; }
+dbq::after, q::after, .quotes::after { content: close-quote; }
 
 #lang-full { margin-top: initial !important; }

@@ -24,7 +24,9 @@ $(() => {
 });
 
 function sorter(a, b) {
-	[a, b] = (a.IPA) ? [a.Martian, b.Martian] : [a.English, b.English];
+	[a, b] = (a.IPA)
+		? [a.Martian, b.Martian]
+		: [a.English, b.English];
 	return (a < b) ? -1 : 1;
 };
 
@@ -78,36 +80,36 @@ function getSpellingRules() {
 
 function englishRomanization(getWord) {
 	let getMartian = getWord.Martian;
-	let getNew = '';
+	let getRom = '';
 	let getIPA = '';
 	for (let MartianLetter in getMartian) {
 		for (let soundLetter in soundSymbol) {
 			soundLetter = soundSymbol[soundLetter];
 			switch (getMartian[MartianLetter]) {
 				case soundLetter.letter:
-					getNew += soundLetter.romanization;
+					getRom += soundLetter.romanization;
 					getIPA += soundLetter.sound;
 					break;
-				case ',': getNew += ', '; getIPA += ' '; break;
-				case ' ': getNew += ' '; getIPA += ' '; break;
+				case ',': getRom += ', '; getIPA += ' '; break;
+				case ' ': getRom += ' '; getIPA += ' '; break;
 			}
 		}
 		if (/ci/g.test(getIPA)) { getIPA = getIPA.replace(/ci/g, 'ki'); }
-		if (/kyi/g.test(getNew)) { getNew = getNew.replace(/kyi/g, 'ki'); }
+		if (/kyi/g.test(getRom)) { getRom = getRom.replace(/kyi/g, 'ki'); }
 
 		if (/sŋ/g.test(getIPA)) { getIPA = getIPA.replace(/sŋ/g, 'ŋ'); }
-		if (/sng/g.test(getNew)) { getNew = getNew.replace(/sng/g, 'ng'); }
+		if (/sng/g.test(getRom)) { getRom = getRom.replace(/sng/g, 'ng'); }
 
 		if (/ʃʒ/g.test(getIPA)) { getIPA = getIPA.replace(/ʃʒ/g, 'ʒ'); }
-		if (/shzh/g.test(getNew)) { getNew = getNew.replace(/shzh/g, 'zh'); }
+		if (/shzh/g.test(getRom)) { getRom = getRom.replace(/shzh/g, 'zh'); }
 
 		// if (/c$/.test(getIPA)) { getIPA = getIPA.replace(/c$/, 'k'); }
-		// if (/ky$/.test(getNew)) { getNew = getNew.replace(/ky$/, 'k'); }
+		// if (/ky$/.test(getRom)) { getRom = getRom.replace(/ky$/, 'k'); }
 		// if (/ɲ$/.test(getIPA)) { getIPA = getIPA.replace(/ɲ$/, 'ŋ'); }
-		// if (/ny$/.test(getNew)) { getNew = getNew.replace(/ny$/, 'ng'); }
+		// if (/ny$/.test(getRom)) { getRom = getRom.replace(/ny$/, 'ng'); }
 
-		if (/(, )+/g.test(getNew)) { getNew = getNew.replace(/(, )+/g, ', '); }
-		if (/ +/g.test(getNew)) { getNew = getNew.replace(/ +/g, ' '); }
+		if (/(, )+/g.test(getRom)) { getRom = getRom.replace(/(, )+/g, ', '); }
+		if (/ +/g.test(getRom)) { getRom = getRom.replace(/ +/g, ' '); }
 	}
-	return { ...getWord, romanization: getNew, IPA: `/${getIPA}/` };
+	return { ...getWord, romanization: getRom, IPA: `/${getIPA}/` };
 }
