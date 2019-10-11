@@ -13,7 +13,7 @@
 
 #head-nav li:not(.right) {
 	float: left;
-	border-right: 1px solid #bbb;
+	border-right: 1px solid #BBB;
 }
 
 #head-nav li a {
@@ -26,8 +26,8 @@
 
 #head-nav li a:hover:not(.active) { background-color: #111; }
 
-#head-nav .active { background-color: #4caf50; }
+#head-nav .active { background-color: #4CAF50; }
 
 .right { float: right; }
-
-.right.border { border-right: 1px solid #bbb; }
+.right.border { border-right: 1px solid #BBB; }
+.right.Lborder { border-left: 1px solid #BBB; }
